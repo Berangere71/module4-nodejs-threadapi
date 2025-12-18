@@ -79,10 +79,9 @@ export async function loadSequelize() {
         const post5 = await user2.createPost({ title: "le film Dune de denis Villeneuve", content: "j'ai adoré et je suis impatiente de voir le 3ème volet" });
 
         await post1.createComment({ content: "j'ai essayé, c'est super" ,UserId:admin.id});
-        const com = await post2.createComment({content: "j'adore les sushis !"});
-        await com.setUser(admin);
-        await post4.createComment({ content: "je propose 50 centimes" });
-        await post5.createComment({ content: "oui j'ai vu le premier film et je n'ai aps aimé" });
+        await post2.createComment({content: "j'adore les sushis !",UserId:admin.id});
+        await post4.createComment({ content: "je propose 50 centimes", UserId:admin.id });
+        await post5.createComment({ content: "oui j'ai vu le premier film et je n'ai aps aimé",UserId:admin.id });
 
 
 
